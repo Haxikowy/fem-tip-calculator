@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap');
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+--str-cyan: hsl(172, 67%, 45%);
+--vdar-cyan: hsl(183, 100%, 15%);
+
+--dgr-cyan: hsl(186, 14%, 43%);
+--a-dgr-cyan: hsl(184, 14%, 56%);
+
+--lgr-cyan: hsl(185, 41%, 84%);
+--a-lgr-cyan: hsl(189, 41%, 97%);
+
+--white: hsl(0, 0%, 100%);
+}
+
+html{
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: var(--lgr-cyan);
+}
+
+/* ////////////////////////////////// */
+/* ///////////// HEADER ///////////// */
+/* ////////////////////////////////// */
+
+header {
+  padding-top: 50px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ////////////////////////////////// */
+/* ////////////// BILL ////////////// */
+/* ////////////////////////////////// */
+
+main {
+  margin-top: 50px;
+  padding: 25px 25px;
+  border-radius: 20px 20px 0 0;
+  background-color: var(--white);
+}
+
+.calc-text {
+  color: var(--dgr-cyan);
+  font-size: .7rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+#bill {
+  width: 100%;
+  padding: 5px 10px;
+  background: url("/images/icon-dollar.svg") var(--a-lgr-cyan) no-repeat 6% 50%;
+  border:none;
+  border-radius: 3px;
+  font-family: inherit;
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--vdar-cyan);
+}
+
+/* ////////////////////////////////// */
+/* ////////////// TIP /////////////// */
+/* ////////////////////////////////// */
+
+.bill-form+.calc-text{
+  margin-top: 35px;
+}
+
+.tip-form {
+  display: grid;
+  grid-template: repeat(3, 1fr)/ repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+.tip-block {
+  display: block;
+  width: 100%;
+  padding: 5px 15px;
+  background-color: var(--vdar-cyan);
+  border-radius: 5px;
+  color: var(--white);
+  font-family: inherit;  
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: background-color .07s ease-in-out,
+              color .07s ease-in-out;
+}
+
+label.tip-block {
+  user-select: none;
+}
+
+input:checked+.tip-block{
+  background-color: var(--str-cyan);
+  color: var(--vdar-cyan)
+}
+
+.tip-custom{
+  background-color: var(--a-lgr-cyan);
+  border: none;
+  color: var(--vdar-cyan);
+  text-align: right;
+}
+
+.tip-form input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* ////////////////////////////////// */
+/* ////////////// NROP ////////////// */
+/* ////////////////////////////////// */
+
+.peoplenr-form {
+  margin-top: 35px;
+}
+
+#peoplenr {
+  width: 100%;
+  padding: 5px 10px;
+  background: url("/images/icon-person.svg") var(--a-lgr-cyan) no-repeat 6% 50%;
+  border:none;
+  border-radius: 3px;
+  font-family: inherit;
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--vdar-cyan);
+}
+
+/* ////////////////////////////////// */
+/* ///////////// SUMMARY //////////// */
+/* ////////////////////////////////// */
+
+.summary {
+  margin: 35px -5px 0px;
+  padding: 25px 20px;
+  border-radius: 10px;
+  background-color: var(--vdar-cyan);
+}
+
+.summary-block{
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+}
+
+.total{
+  margin-top: 20px;
+}
+
+.summary-htext{
+  grid-column: 1/2;
+  justify-self: start;
+  align-self: end;
+  display:block;
+  color: var(--white);
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.summary-ltext{
+  grid-column: 1/2;  
+  display: block;
+  color: var(--a-dgr-cyan);
+  font-size: .65rem;
+  font-weight: 400;
+}
+
+.summary-score {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  justify-self: end;
+  align-self: center;
+  display: block;
+  color: var(--str-cyan);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.reset {
+  width: 100%;
+  margin-top: 35px;
+  padding: 10px 0;
+  background-color: var(--str-cyan);
+  border: none;
+  border-radius: 5px;
+  color: var(--vdar-cyan);
+  font-size: .9rem;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color .07s ease-in-out;
+}
+
+.reset:hover, .reset:active {
+  color: var(--white);
+}
+
+/* ////////////////////////////////// */
+/* ///////////// FOOTER ///////////// */
+/* ////////////////////////////////// */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
