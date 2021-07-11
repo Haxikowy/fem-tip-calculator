@@ -24,15 +24,15 @@
 
       <p class="calc-text">Select Tip %</p>
       <form class="tip-form">
-        <input type="radio" name="tip" id="tip1st" checked>
+        <input type="radio" name="tip" id="tip1st" data-tip="0.05" checked>
         <label class="tip-block" for="tip1st">5%</label>
-        <input type="radio" name="tip" id="tip2nd">
+        <input type="radio" name="tip" id="tip2nd" data-tip="0.1">
         <label class="tip-block" for="tip2nd">10%</label>
-        <input type="radio" name="tip" id="tip3rd">
+        <input type="radio" name="tip" id="tip3rd" data-tip="0.15">
         <label class="tip-block" for="tip3rd">15%</label>
-        <input type="radio" name="tip" id="tip4th">
+        <input type="radio" name="tip" id="tip4th" data-tip="0.25">
         <label class="tip-block" for="tip4th">25%</label>
-        <input type="radio" name="tip" id="tip5th">
+        <input type="radio" name="tip" id="tip5th" data-tip="0.50">
         <label class="tip-block" for="tip5th">50%</label>
         <input class="tip-block tip-custom" type="text" name="tip" id="tip6th" placeholder="Custom">
       </form>
@@ -48,21 +48,22 @@
         <div class="summary-block amount">
           <span class="summary-htext">Tip Amount</span>
           <span class="summary-ltext">/ person</span>
-          <span class="summary-score">$4.27</span>
+          <span class="summary-score" id="tip-output">$4.27</span>
         </div>
         <div class="summary-block total">
           <span class="summary-htext">Total</span>
           <span class="summary-ltext">/ person</span>
-          <span class="summary-score">$32.79</span>
+          <span class="summary-score" id="total-output">$32.79</span>
         </div>
         <button class="reset">reset</button>
       </section>
     </main>
-    <!-- <footer class="attribution">
+    <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </footer> -->
+      Coded by <a href="https://github.com/Haxikowy">Szymon Dolnik</a>.
+    </footer>
   </div>
+  <script src="scripts/calculate.js"></script>
   <script src="scripts/app.js"></script>
 </body>
 
