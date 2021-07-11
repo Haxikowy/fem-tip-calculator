@@ -16,7 +16,7 @@ class tipCalculator {
     this.value1 = (bill * tip) / people
     this.value2 = (bill / people) + this.value1
 
-    this.updateUI(this.value1.toString(), this.value2.toString())
+    this.updateUI(round2Fixed(this.value1), round2Fixed(this.value2))
   }
 
   updateUI(value1, value2) {

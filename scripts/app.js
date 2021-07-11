@@ -15,7 +15,18 @@ mainElement.addEventListener('change', e => {
   const peopleValue = peopleNRForm[0].value.trim();
 
   selectTipInputs.forEach(tipInput => {
-    if (tipInput.checked) {
+    if (customTipInput.value !== '') {
+      if (customTipInput.value.trim().includes('%')) {
+        let tipValue = customTipInput.value.trim().slice(0, -1);
+        tipValue = tipValue / 100;
+
+        calculator.init(billValue, tipValue, peopleValue)
+      }
+      let tipValue = customTipInput.value.trim();
+      tipValue = tipValue / 100;
+
+      calculator.init(billValue, tipValue, peopleValue)
+    } else if (tipInput.checked) {
       const tipValue = tipInput.attributes[3].value.trim();
 
       calculator.init(billValue, tipValue, peopleValue)
