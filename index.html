@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media-queries.css">
   <title>Tip calculator app</title>
 </head>
 
@@ -22,20 +23,22 @@
         <input type="text" name="bill" id="bill">
       </form>
 
-      <p class="calc-text">Select Tip %</p>
-      <form class="tip-form">
-        <input type="radio" name="tip" id="tip1st" data-tip="0.05" checked>
-        <label class="tip-block" for="tip1st">5%</label>
-        <input type="radio" name="tip" id="tip2nd" data-tip="0.1">
-        <label class="tip-block" for="tip2nd">10%</label>
-        <input type="radio" name="tip" id="tip3rd" data-tip="0.15">
-        <label class="tip-block" for="tip3rd">15%</label>
-        <input type="radio" name="tip" id="tip4th" data-tip="0.25">
-        <label class="tip-block" for="tip4th">25%</label>
-        <input type="radio" name="tip" id="tip5th" data-tip="0.50">
-        <label class="tip-block" for="tip5th">50%</label>
-        <input class="tip-block tip-custom" type="text" name="tip" id="tip6th" placeholder="Custom">
-      </form>
+      <div class="tip-container">
+        <p class="calc-text">Select Tip %</p>
+        <form class="tip-form">
+          <input type="radio" name="tip" id="tip1st" data-tip="0.05" checked>
+          <label class="tip-block" for="tip1st">5%</label>
+          <input type="radio" name="tip" id="tip2nd" data-tip="0.1">
+          <label class="tip-block" for="tip2nd">10%</label>
+          <input type="radio" name="tip" id="tip3rd" data-tip="0.15">
+          <label class="tip-block" for="tip3rd">15%</label>
+          <input type="radio" name="tip" id="tip4th" data-tip="0.25">
+          <label class="tip-block" for="tip4th">25%</label>
+          <input type="radio" name="tip" id="tip5th" data-tip="0.50">
+          <label class="tip-block" for="tip5th">50%</label>
+          <input class="tip-block tip-custom" type="text" name="tip" id="tip6th" placeholder="Custom">
+        </form>
+      </div>
 
       <form class="peoplenr-form">
         <label for="peoplenr">
@@ -55,7 +58,7 @@
           <span class="summary-ltext">/ person</span>
           <span class="summary-score" id="total-output">$32.79</span>
         </div>
-        <button class="reset">reset</button>
+        <button class="reset reset-off">reset</button>
       </section>
     </main>
     <footer class="attribution">

@@ -8,7 +8,10 @@
 
 :root {
 --str-cyan: hsl(172, 67%, 45%);
+--a-str-cyan: hsl(172, 61%, 77%);
+
 --vdar-cyan: hsl(183, 100%, 15%);
+--a-vdar-cyan: hsl(183, 79%, 24%);
 
 --dgr-cyan: hsl(186, 14%, 43%);
 --a-dgr-cyan: hsl(184, 14%, 56%);
@@ -78,7 +81,7 @@ main {
 /* ////////////// TIP /////////////// */
 /* ////////////////////////////////// */
 
-.bill-form+.calc-text{
+.tip-container .calc-text{
   margin-top: 35px;
 }
 
@@ -212,10 +215,6 @@ input:checked+.tip-block{
   transition: color .07s ease-in-out;
 }
 
-.reset:hover, .reset:active {
-  color: var(--white);
-}
-
 /* ////////////////////////////////// */
 /* ///////////// FOOTER ///////////// */
 /* ////////////////////////////////// */
@@ -229,4 +228,27 @@ input:checked+.tip-block{
 
 .attribution a {
   color: var(--str-cyan);
+}
+
+/* ////////////////////////////////// */
+/* ////////// hover/focus /////////// */
+/* ////////////////////////////////// */
+
+
+input[type="text"]:focus{
+  outline: 2px solid var(--str-cyan);
+}
+
+label.tip-block:hover{
+  color: var(--vdar-cyan);
+  background-color: var(--a-str-cyan);
+}
+
+.reset:hover{
+  background-color: var(--a-str-cyan);
+}
+
+.reset-off, .reset-off:hover{
+  background-color: var(--a-vdar-cyan);
+  cursor: default;
 }

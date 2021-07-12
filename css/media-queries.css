@@ -1,0 +1,57 @@
+@media(min-width: 700px){
+  header{
+    padding-top: 130px;
+  }
+  main{
+    display: grid;
+    grid-template: .5fr 1.5fr .5fr/ repeat(2, 1fr);
+    grid-column-gap: 30px;
+    max-width: 850px;
+    margin: 90px auto 0;
+  }
+  .bill-form {
+    grid-column: 1/2;
+  }
+  #bill{
+    cursor: pointer;
+  }
+  .tip-container {
+    grid-column: 1/2;
+  }
+  .tip-form {
+    grid-template:repeat(2, 1fr) /repeat(3, 1fr) ;
+  }
+  .tip-block{
+    cursor: pointer;
+  }
+
+  .peoplenr-form {
+    grid-column: 1/2;
+  }
+  #peoplenr {
+    cursor: pointer;
+  }
+
+  .summary{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 30px;
+    margin: 0;
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+
+  .summary-score{
+    font-size: 1.8rem;
+  }
+
+  .reset {
+    grid-row: 4/5;
+    justify-self: end;
+    align-self: end;
+    cursor: pointer;
+  }
+  .attribution {
+    padding-top: 80px;
+  }
+}

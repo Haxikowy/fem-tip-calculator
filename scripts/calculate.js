@@ -2,11 +2,11 @@ class tipCalculator {
   constructor(tipOutput, totalOutput) {
     this.tipOutput = tipOutput;
     this.totalOutput = totalOutput;
-    this.reset();
+    this.resetUI();
   }
-  reset() {
-    this.tipOutput.innerText = '';
-    this.totalOutput.innerText = '';
+  resetUI() {
+    this.tipOutput.innerText = '$0.00';
+    this.totalOutput.innerText = '$0.00';
   }
   init(bill, tip, people) {
     if (bill === '' || bill === '0' || isNaN(bill)) return
