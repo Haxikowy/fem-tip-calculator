@@ -7,6 +7,8 @@
 }
 
 :root {
+--err-text: hsl(8, 61%, 66%);
+
 --str-cyan: hsl(172, 67%, 45%);
 --a-str-cyan: hsl(172, 61%, 77%);
 
@@ -251,4 +253,26 @@ label.tip-block:hover{
 .reset-off, .reset-off:hover{
   background-color: var(--a-vdar-cyan);
   cursor: default;
+}
+
+/* ////////////////////////////////// */
+/* /////// input validation ///////// */
+/* ////////////////////////////////// */
+
+.bill-form label{
+  display: flex;
+  justify-content: space-between;
+}
+
+.peoplenr-form label{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-error {
+  color: var(--err-text);
+}
+
+.text-error, input.text-error:focus {
+  outline: 2px solid var(--err-text);
 }
