@@ -33,9 +33,9 @@ mainElement.addEventListener('change', e => {
   // and also we format input
   // if not we search for all radio inputs if they are checked
 
-  if (validate(billValue)) {
-    if (validate(peopleValue)) {
-      if (validate(customTipValue)) {
+  if (validate(billValue)[0]) {
+    if (validate(peopleValue)[0]) {
+      if (validate(customTipValue)[0]) {
         selectTipInputs.forEach(tipInput => {
           if (customTipValue !== '') {
             if (customTipValue.includes('%')) {

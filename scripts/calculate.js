@@ -9,9 +9,9 @@ class tipCalculator {
     this.totalOutput.innerText = '$0.00';
   }
   init(bill, tip, people) {
-    if (bill === '' || bill === '0' || isNaN(bill)) return
-    if (tip === '' || tip === '0' || isNaN(tip)) return
-    if (people === '' || people === '0' || isNaN(people)) return
+    if (bill === '') return
+    if (tip === '') return
+    if (people === '') return
 
     this.value1 = (bill * tip) / people
     this.value2 = (bill / people) + this.value1
